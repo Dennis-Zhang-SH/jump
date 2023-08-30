@@ -38,8 +38,8 @@ enum Opt {
 #[derive(Debug, Args, Serialize, Deserialize)]
 struct Server {
     server_name: String,
-    #[arg(value_parser  = parse_ip)]
-    server_address: IpAddr,
+    // #[arg(value_parser  = parse_ip)]
+    server_address: String,
     #[arg(default_value = "22")]
     port: u32,
     #[command(subcommand)]
